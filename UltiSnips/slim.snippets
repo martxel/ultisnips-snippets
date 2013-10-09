@@ -1,0 +1,58 @@
+snippet html "html5 template"
+doctype html
+html
+	head
+		meta charset="utf-8"
+		meta http-equiv="X-UA-Compatible" content="IE=edge"
+		title $1
+	body
+		header
+			$2
+		footer
+endsnippet
+
+snippet link "link"
+link rel="${1:stylesheet}" href="${2:css/${3:app}.css}"
+endsnippet
+
+snippet script "script src"
+script src="${1:js/${2:app}.js}"
+endsnippet
+
+snippet nav "nav"
+nav#${1:main-nav}
+	ul
+		li.active: a href="${2:#}" ${3:Link1}
+		li: a href="${4:#}" ${5:Link2}
+		li: a href="${6:#}" ${7:Link3}
+endsnippet
+
+snippet lia "list item with anchor"
+li: a href="${1:#}" ${2:Link}
+endsnippet
+
+snippet a "anchor, a link"
+a href="${1:#}" ${2:Link}
+endsnippet
+
+snippet input "input"
+input type="${1:text/submit/hidden/button}" name="$2"${3: value="$4"}${5: id="${6:$2}"}${7: placeholder="${8:`!p snip.rv = t[2].capitalize()`}"}
+endsnippet
+
+snippet textarea "textarea"
+textarea name="$1" rows="${2:4}" cols="${3:30}"
+endsnippet
+
+snippet table "table"
+table
+	thead
+		tr
+			th ${1:Id}
+			th ${2:Name}
+			th ${3:Action}
+	tbody
+		tr
+			td ${4:id}
+			td ${5:name}
+			td ${6:view | edit | delete}
+endsnippet
